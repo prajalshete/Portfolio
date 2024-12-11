@@ -5,28 +5,28 @@ const projects = [
   {
     title: "Weather App",
     description: "An online store built with React, Node.js, and MongoDB, featuring user authentication, product management, and Stripe payment integration.",
-    image: "/Images/weather.jpg",
+    image: "/Images/weather.jpg", // Keep the image path relative to the public folder
     liveLink: "https://prajalshete.github.io/JAVASCRIPT_Portfolio/weather-app/",
     githubLink: "https://github.com/prajalshete/JAVASCRIPT_Portfolio/tree/main/weather-app",
   },
   {
     title: "TO-DO List App",
     description: "A personal portfolio built with React.js and Framer Motion, showcasing projects and skills with a modern and responsive design.",
-    image: "/Images/todo.jpg",
+    image: "/Images/todo.jpg", // Keep the image path relative to the public folder
     liveLink: "https://prajalshete.github.io/JAVASCRIPT_Portfolio/To-Do%20List%20App/",
     githubLink: "https://github.com/prajalshete/JAVASCRIPT_Portfolio/tree/main/To-Do%20List%20App",
   },
   {
     title: "Color Picker Tool",
     description: "A platform for creating and booking event tickets, built using MERN stack with payment gateway integration.",
-    image: "/Images/color_picker.jpg",
+    image: "/Images/color_picker.jpg", // Keep the image path relative to the public folder
     liveLink: "https://prajalshete.github.io/JAVASCRIPT_Portfolio/Color%20Picker%20Tool/",
     githubLink: "https://github.com/prajalshete/JAVASCRIPT_Portfolio/tree/main/Color%20Picker%20Tool",
   },
   {
     title: "Color Flipper",
     description: "A weather forecasting app using React.js and OpenWeather API to display real-time weather updates.",
-    image: "/Images/color_flipper.jpg",
+    image: "/Images/color_flipper.jpg", // Keep the image path relative to the public folder
     liveLink: "https://prajalshete.github.io/JAVASCRIPT_Portfolio/Color%20Flipper/",
     githubLink: "https://github.com/prajalshete/JAVASCRIPT_Portfolio/tree/main/Color%20Flipper",
   },
@@ -39,7 +39,12 @@ const Projects = () => {
       <div className="projects-container">
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
-            <img src={project.image} alt={project.title} className="project-image" />
+            {/* Updated image path using process.env.PUBLIC_URL */}
+            <img 
+              src={`${process.env.PUBLIC_URL}${project.image}`} 
+              alt={project.title} 
+              className="project-image" 
+            />
             <div className="project-details">
               <h3 className="project-title">{project.title}</h3>
               <p className="project-description">{project.description}</p>
