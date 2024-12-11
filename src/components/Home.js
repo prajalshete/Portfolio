@@ -27,10 +27,8 @@ const Home = () => {
             animate={{ scale: 1 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
           >
-            <img
-              src="/Images/PRAJAL_Image.JPG" 
-              alt="Profile"
-            />
+            {/* Correctly reference the image from the public folder */}
+            <img src={`${process.env.PUBLIC_URL}/Images/PRAJAL_Image.JPG`} alt="Prajalshete" />
           </motion.div>
         </div>
       </div>
@@ -41,37 +39,37 @@ const Home = () => {
         <div className="skills-container">
           <div className="skill-item">
             <img
-              src="/Images/javascript.png" alt="JavaScript"
+              src={`${process.env.PUBLIC_URL}/Images/javascript.png`} alt="JavaScript"
             />
             <p>JavaScript</p>
           </div>
           <div className="skill-item">
             <img
-              src="/Images/react.jpg" alt="React"
+              src={`${process.env.PUBLIC_URL}/Images/react.jpg`} alt="React"
             />
             <p>React</p>
           </div>
           <div className="skill-item">
             <img
-              src="/Images/node.png" alt="Node.js"
+              src={`${process.env.PUBLIC_URL}/Images/node.png`} alt="Node.js"
             />
             <p>Node.js</p>
           </div>
           <div className="skill-item">
             <img
-              src="/Images/html.png" alt="HTML"
+              src={`${process.env.PUBLIC_URL}/Images/html.png`} alt="HTML"
             />
             <p>HTML</p>
           </div>
           <div className="skill-item">
             <img
-              src="/Images/css.png" alt="CSS"
+              src={`${process.env.PUBLIC_URL}/Images/css.png`} alt="CSS"
             />
             <p>CSS</p>
           </div>
           <div className="skill-item">
             <img
-              src="/Images/bootstrap.png" alt="Bootstrap"
+              src={`${process.env.PUBLIC_URL}/Images/bootstrap.png`} alt="Bootstrap"
             />
             <p>Bootstrap</p>
           </div>
@@ -89,7 +87,7 @@ const Home = () => {
           </div>
           <div className="education-item">
             <h3>HSC</h3>
-            <p>Purohit Kanya Prashala & Junior College, Sangli  | Graduated: 2017</p>
+            <p>Purohit Kanya Prashala & Junior College, Sangli | Graduated: 2017</p>
             <p>Completed high school with a focus on science and mathematics.</p>
           </div>
         </div>
@@ -103,7 +101,7 @@ const Home = () => {
             <h3>MERN Stack Developer Intern</h3>
             <p>Scalefull technologies LLP | Jan 2024 - Present</p>
             <ul>
-            <li>Assisted in building REST APIs using Node.js.</li>
+              <li>Assisted in building REST APIs using Node.js.</li>
               <li>Collaborated with the design team to implement responsive designs.</li>
             </ul>
           </div>
@@ -111,7 +109,6 @@ const Home = () => {
             <h3>Front End Developer Intern</h3>
             <p>Rajyug IT Solutions | May 2023 - Dec 2023</p>
             <ul>
-              
               <li>Developed user-friendly interfaces using React.js.</li>
               <li>Contributed to front-end development using JavaScript and Bootstrap.</li>
             </ul>
